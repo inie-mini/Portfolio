@@ -28,3 +28,24 @@ $background-opacity: 0.4;
     }
   }
 }
+
+@mixin mediaS {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaM {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaL {
+  @media screen and (min-width: 1024px) and ( max-width: 1170){
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
