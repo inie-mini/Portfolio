@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin-block-end: 5px;
-    background: #fff;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
 
@@ -79,7 +79,8 @@
     .portrait {
       width: 250px;
       height: 250px;
-      background: url(../dist/img/portrait.jpg);
+      background: url(/dist/img/Portrait1.png) no-repeat;
+      align-self: center;
       border: solid 3px $secondary-color;
       border-radius: 50%;
     }
@@ -105,7 +106,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 
