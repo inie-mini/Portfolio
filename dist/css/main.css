@@ -121,7 +121,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 5rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -155,13 +155,6 @@ main {
     main#home h1 {
       margin-block-start: 20vh; }
 
-footer {
-  height: 60px;
-  text-align: center;
-  background: #2b2b2b;
-  padding: 1rem;
-  color: #fff; }
-
 .about-info {
   display: grid;
   gap: 30px;
@@ -184,6 +177,53 @@ footer {
     background: #515151;
     border-block-end: 5px solid #eece1a;
     padding: 0.5rem; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem; }
+  .projects img {
+    width: 100%;
+    border: 3px solid #fff;
+    font-size: 0.7rem; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-in-out; }
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-block-end: 0.3rem; }
+  .btn:hover, .btn-light:hover, .btn-dark:hover {
+    background: #eece1a;
+    color: #000;
+    transition: all 0.5s ease-in-out; }
+
+.btn-light {
+  background: #c4c4c4;
+  color: #333; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+footer {
+  height: 60px;
+  text-align: center;
+  background: #2b2b2b;
+  padding: 1rem;
+  color: #fff; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 1024px) and (max-width: 1170) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -216,7 +256,9 @@ footer {
     .about-info .bio-image {
       grid-column: 1; }
     .about-info .bio {
-      grid-column: 1; } }
+      grid-column: 1; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -226,4 +268,8 @@ footer {
     font-size: 15vw; }
   main#about .bio-image {
     max-width: 100%;
-    height: auto; } }
+    height: auto; }
+  main#work h1 {
+    font-size: 15vw; }
+  .projects {
+    grid-template-columns: 1fr; } }

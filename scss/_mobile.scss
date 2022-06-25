@@ -1,6 +1,14 @@
-@include mediaXl {}
+@include mediaXl {
+  .projects{
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
-@include mediaL {}
+@include mediaL {
+  .projects{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 @include mediaM {
   main {
@@ -43,26 +51,46 @@
 
   .about-info {
     grid-template-columns: 1fr;
-    .bio-image{ grid-column: 1;}
-    .bio { grid-column: 1;}
+
+    .bio-image {
+      grid-column: 1;
+    }
+
+    .bio {
+      grid-column: 1;
+    }
+  }
+  .projects{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @include mediaS {
   main#home {
     h1 {
-    margin-block-start: 10vh;
-    font-size: 15vw;
+      margin-block-start: 10vh;
+      font-size: 15vw;
+    }
   }
-}
 
   main#about {
     h1 {
       font-size: 15vw;
     }
+
     .bio-image {
       max-width: 100%;
       height: auto;
     }
+  }
+
+  main#work {
+    h1 {
+      font-size: 15vw;
+    }
+  }
+
+  .projects{
+    grid-template-columns: 1fr;
   }
 }

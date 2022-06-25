@@ -22,7 +22,7 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   &.sm-heading {
@@ -73,6 +73,92 @@ main {
   }
 }
 
+
+// ABOUT SECTION
+
+.about-info {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-column: 1/2;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+  }
+
+  .bio {
+    font-size: 1.5rem;
+    grid-column: 2/4;
+  }
+
+  .job-1 {
+    grid-area: 'job-1';
+  }
+
+  .job-2 {
+    grid-area: 'job-2';
+  }
+
+  .job-3 {
+    grid-area: 'job-3';
+  }
+
+  .job {
+    background: lighten($primary-color, 5);
+    border-block-end: 5px solid $secondary-color;
+    padding: 0.5rem;
+  }
+}
+
+
+// WORK SECTION
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+
+  img {
+    width: 100%;
+    border: 3px solid #fff;
+    font-size: 0.7rem;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-block-end: 0.3rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    @include easeOut;
+  }
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+
 footer {
   height: 60px;
   text-align: center;
@@ -81,49 +167,4 @@ footer {
   color: set-text-color($primary-color);
 }
 
-
-// ABOUT SECTION
-
-.about-info {
-  display: grid;
-  gap: 30px;
-  // grid-template-areas:
-  //   'bioimage bio bio'
-  //   'job-1 job-2 job-3';
-  grid-template-columns: repeat(3, 1fr);
-
-  .bio-image {
-    // grid-area: 'bioimage';
-    grid-column: 1/2;
-    margin: auto;
-    border-radius: 50%;
-    border: 3px solid $secondary-color;
-  }
-  
-  .bio {
-    // grid-area: 'bio';
-    font-size: 1.5rem;
-    grid-column: 2/4;
-  }
-  
-  .job-1 {
-    grid-area: 'job-1';
-  }
-  
-  .job-2 {
-    grid-area: 'job-2';
-  }
-  
-  .job-3 {
-    grid-area: 'job-3';
-  }
-  
-  .job {
-    background: lighten($primary-color, 5);
-    border-block-end: 5px solid $secondary-color;
-    padding: 0.5rem;
-  }
-}
-
 @import 'mobile';
-
