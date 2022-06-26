@@ -32,7 +32,9 @@ $background-opacity: 0.4;
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
     @return #000;
-  } @else {
+  }
+
+  @else {
     @return #fff;
   }
 }
